@@ -27,7 +27,7 @@ function App() {
     {
       title: "Kutilmagan harajatlar",
       amount: 45,
-      date: new Date(2023, 3, 25)
+      date: new Date(2023, 6, 25)
     },
   ];
 
