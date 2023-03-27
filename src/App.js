@@ -1,85 +1,67 @@
 import './App.css';
-import Test2 from './components/test2';
-
+import Books from './components/Books';
 
 function App() {
-  const expences = [
+  const firstBook = [
     {
-      title: "Dasturlash kurslari",
-      amount: 35,
-      date: new Date(2023, 3, 25)
+      img: "https://loremflickr.com/320/241",
+      title: "Otamdan qolgan dalalar",
+      author: "Tog'ay Murod",
     },
     {
-      title: "Kammunal harajatlar",
-      amount: 20,
-      date: new Date(2023, 3, 25)
+      img: "https://loremflickr.com/320/242",
+      title: "O'tgan kunlar",
+      author: "Abdulla Qodiriy",
     },
     {
-      title: "Yo'l kira",
-      amount: 11,
-      date: new Date(2023, 3, 25)
+      img: "https://loremflickr.com/320/243",
+      title: "Kecha va kunduz",
+      author: "Abdulhamid Cho'lpon",
     },
     {
-      title: "Ijara",
-      amount: 100,
-      date: new Date(2023, 5, 25)
+      img: "https://loremflickr.com/320/244",
+      title: "Ikki eshik orasi",
+      author: "O'tkir Hoshimov",
     },
     {
-      title: "Kutilmagan harajatlar",
-      amount: 45,
-      date: new Date(2023, 6, 25)
+      img: "https://loremflickr.com/320/245",
+      title: "Urushning so'nggi qurboni",
+      author: "O'tkir Hoshimov",
+    },
+    {
+      img: "https://loremflickr.com/320/246",
+      title: "Qiyomat",
+      author: "Chingiz Aytmatov",
+    },
+    {
+      img: "https://loremflickr.com/320/247",
+      title: "Baxtiqaro Kerri",
+      author: "Teador Drayzer",
+    },
+    {
+      img: "https://loremflickr.com/320/245",
+      title: "Urush va tinchlik",
+      author: "Lev Tolstoy",
+    },
+    {
+      img: "https://loremflickr.com/320/245",
+      title: "Cho'qintirgan ota",
+      author: "Mario Pyozo",
     },
   ];
-
   return (
     <div className='container'>
-      <h1 className='headline'>Hello World</h1>
-      <h2>Front-end dasturchining bir oylik xarajatlari</h2>
-      <Test2
-        title={
-          expences[0].title  
-        }
-        amount={
-          expences[0].amount
-        }
-        date={expences[0].date}
-      />
-      <Test2
-        title={
-          expences[1].title  
-        }
-        amount={
-          expences[1].amount
-        }
-        date={expences[1].date}
-      />
-      <Test2
-        title={
-          expences[2].title  
-        }
-        amount={
-          expences[2].amount
-        }
-        date={expences[2].date}
-      />
-      <Test2
-        title={
-          expences[3].title  
-        }
-        amount={
-          expences[3].amount
-        }
-        date={expences[3].date}
-      />
-      <Test2
-        title={
-          expences[4].title  
-        }
-        amount={
-          expences[4].amount
-        }
-        date={expences[4].date}
-      />
+      <div className='book_wrapper'>
+        {firstBook.map((books, index) => {
+          return (
+            <Books
+              img={books.img}
+              title={books.title} author={books.author}
+              key={index}
+            />
+          );
+        })}    
+      </div>       
     </div>
   );
 }
